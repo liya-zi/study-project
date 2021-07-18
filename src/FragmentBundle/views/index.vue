@@ -1,9 +1,9 @@
 <template>
-  <div class="home-container">
+  <div class="fragment-container">
     <div class="every-card" v-for="(item, index) in homeData" :key="index">
       <div class="card-title">{{ item.title }}</div>
       <router-link :to="item.router">
-        <div class="card-detail">模块详情</div>
+        <div class="card-detail">模块详情22</div>
       </router-link>
     </div>
   </div>
@@ -17,7 +17,7 @@ export default {
       homeData: [
         { title: 'Es6-module', summary: '', router: '/es6' },
         { title: 'D3-module', summary: '', router: '/es6' },
-        { title: 'Fragment-module', summary: '', router: '/fragmentBundle' },
+        { title: 'Fragment-module', summary: '', router: '/es6' },
         { title: 'Webpack-module', summary: '', router: '/es6' },
         { title: 'Http-module', summary: '', router: '/es6' }
       ]

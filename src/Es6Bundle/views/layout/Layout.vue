@@ -3,7 +3,10 @@
     <el-header>
       <div class="main-header">
         <img src="@/assets/logo.png" />
-        前端基本功修炼06 - ES6入坑(一)
+        <div style="margin-right: 15px">ES6模块：es6基础知识学习</div>
+        <router-link to="/">
+          返回首页
+        </router-link>
       </div>
     </el-header>
     <el-container class="main-container">
@@ -32,45 +35,45 @@
 
 <script>
 export default {
-  name: "Layout",
+  name: 'Layout',
   data() {
     return {};
   },
   computed: {
     actived() {
-      let actived = "";
+      let actived = '';
       switch (true) {
-        case this.$route.path.indexOf("demo1") !== -1:
-          actived = "/demo1";
+        case this.$route.path.indexOf('demo1') !== -1:
+          actived = '/demo1';
           break;
-        case this.$route.path.indexOf("demo2") !== -1:
-          actived = "/demo2";
+        case this.$route.path.indexOf('demo2') !== -1:
+          actived = '/demo2';
           break;
-        case this.$route.path.indexOf("demo3") !== -1:
-          actived = "/demo3";
+        case this.$route.path.indexOf('demo3') !== -1:
+          actived = '/demo3';
           break;
-        case this.$route.path.indexOf("demo4") !== -1:
-          actived = "/demo4";
+        case this.$route.path.indexOf('demo4') !== -1:
+          actived = '/demo4';
           break;
-        case this.$route.path.indexOf("arr") !== -1:
-          actived = "/arr";
+        case this.$route.path.indexOf('arr') !== -1:
+          actived = '/arr';
           break;
-        case this.$route.path.indexOf("obj") !== -1:
-          actived = "/obj";
+        case this.$route.path.indexOf('obj') !== -1:
+          actived = '/obj';
           break;
-        case this.$route.path.indexOf("set") !== -1:
-          actived = "/set";
+        case this.$route.path.indexOf('set') !== -1:
+          actived = '/set';
           break;
-        case this.$route.path.indexOf("map") !== -1:
-          actived = "/map";
+        case this.$route.path.indexOf('map') !== -1:
+          actived = '/map';
           break;
         default:
           actived = this.$route.path;
       }
 
       return actived;
-    },
-  },
+    }
+  }
 };
 </script>
 
