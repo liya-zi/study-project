@@ -4,12 +4,14 @@ import Router from 'vue-router'
 // all router
 import AppBundleRoutes from '@/AppBundle/router/index'
 import Es6BundleRouter from '@/Es6Bundle/router/index'
+import DataVisualRouter from '@/DataVisualBundle/router/index'
 
 // 合并所有模块的路由
 Vue.use(Router)
 
 const routes = AppBundleRoutes.concat(
-  Es6BundleRouter
+  Es6BundleRouter,
+  DataVisualRouter
 )
 
 const router = new Router(

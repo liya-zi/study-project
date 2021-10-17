@@ -11,17 +11,36 @@
 
 <script>
 export default {
-  name: 'index',
+  name: "index",
   data() {
     return {
       homeData: [
-        { title: 'Es6-module', summary: '', router: '/es6' },
-        { title: 'D3-module', summary: '', router: '/es6' },
-        { title: 'Fragment-module', summary: '', router: '/fragmentBundle' },
-        { title: 'Webpack-module', summary: '', router: '/es6' },
-        { title: 'Http-module', summary: '', router: '/es6' }
-      ]
+        { title: "Es6-module", summary: "", router: "/es6" },
+        { title: "D3-module", summary: "", router: "/es6" },
+        {
+          title: "DataVisual-module",
+          summary: "",
+          router: "/dataVisualBundle"
+        },
+        { title: "Webpack-module", summary: "", router: "/es6" },
+        { title: "Http-module", summary: "", router: "/es6" }
+      ],
+      shows: false
     };
+  },
+  mounted() {
+    window.addEventListener("keyup", this.handleKeydown);
+  },
+  methods: {
+    showPopover() {
+      this.shows = !this.shows;
+    },
+    handleKeydown(ev) {
+      if (ev.keyCode === 27) {
+        // esc
+        this.shows = false;
+      }
+    }
   }
 };
 </script>
@@ -59,5 +78,15 @@ export default {
        border-radius 10px
     }
    }
+   .popovers{
+  width:50vw;
+  height:50vh;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color pink
+}
 }
 </style>
