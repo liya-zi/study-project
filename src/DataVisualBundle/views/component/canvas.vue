@@ -31,7 +31,7 @@ export default {
       const rootdata = mockData;
       this.dataHandle(rootdata);
       // 绑定鼠标事件
-      canvas.onclick = (e) => {
+      canvas.onclick = e => {
         const x = e.offsetX;
         const y = e.offsetY;
         this.moseHandle(x, y, this.handleData);

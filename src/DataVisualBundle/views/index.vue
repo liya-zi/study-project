@@ -15,8 +15,8 @@
         <el-menu-item index="dataVisualCanvas">
           canvas-demo
         </el-menu-item>
-        <el-menu-item index="4">
-          导航四
+        <el-menu-item index="dataVisualSvg2canvas">
+          svg2canvas
         </el-menu-item>
       </el-menu>
     </div>
