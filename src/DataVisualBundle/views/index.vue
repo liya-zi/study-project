@@ -6,9 +6,6 @@
         @select="handleSelect"
         class="el-menu-vertical-demo"
       >
-        <el-menu-item index="dataVisualSummary">
-          可视化简介
-        </el-menu-item>
         <el-menu-item index="dataVisualSvg">
           svg-demo
         </el-menu-item>
@@ -17,6 +14,9 @@
         </el-menu-item>
         <el-menu-item index="dataVisualSvg2canvas">
           svg2canvas
+        </el-menu-item>
+        <el-menu-item index="dataVisualSummary">
+          动画
         </el-menu-item>
       </el-menu>
     </div>

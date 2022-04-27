@@ -84,10 +84,9 @@ export default {
       } else {
         const { x, y, r } = node;
         if ((my - y) * (my - y) + (mx - x) * (mx - x) < r * r) {
-          console.log(x, y);
-          this.draw(node, { fillStyle: "rgba(255,0,0,0.2)" });
-          // this.clearCircle(x, y, r);
-          // this.context.fillStyle = "rgba(255,0,0,0.2)";
+          console.log("点击的节点", node, x, y);
+          this.clearCircle(x, y, r);
+          // this.context.fillStyle = "rgba(0, 128, 0, 0.1)";
           // this.context.beginPath();
           // this.context.arc(x, y, r, 0, this.TAU);
           // this.context.fill();
@@ -96,22 +95,19 @@ export default {
           // this.context.font = "1.5rem Arial";
           // this.context.textAlign = "center";
           // this.context.fillText(name, x, y);
+          this.draw(node, { fillStyle: "rgba(0, 128, 0, 0.1)" });
         } else {
-          // this.clearCircle(x, y, r);
-          // this.context.fillStyle = "rgba(0, 0, 0, 0.2)";
+          this.clearCircle(x, y, r);
+          this.draw(node, { fillStyle: "rgba(0, 0, 0, 0.2)" });
         }
       }
     },
     // 清除圆
     clearCircle(x, y, r) {
-      console.log("清除clearCircle");
-      this.context.save();
       this.context.fillStyle = "rgba(255,255,255,255)";
-      // this.context.fillStyle = "rgba(0, 0, 0, 0.2)";
       this.context.beginPath();
       this.context.arc(x, y, r, 0, this.TAU);
       this.context.fill();
-      this.context.restore();
     }
   }
 };
