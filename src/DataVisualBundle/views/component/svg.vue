@@ -37,8 +37,9 @@ export default {
       this.dataHandle(rootdata);
       let activeTarget = null;
       const titleEl = document.getElementById("title");
-      this.svgroot.addEventListener("click", (evt) => {
+      this.svgroot.addEventListener("click", evt => {
         let target = evt.target;
+        console.log("svg target:", target.nodeName, target);
         if (target.nodeName === "text") target = target.previousSibling;
         if (activeTarget !== target) {
           if (activeTarget)
